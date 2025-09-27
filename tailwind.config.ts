@@ -47,6 +47,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Nintendo-specific colors
+        nintendo: {
+          red: "hsl(var(--nintendo-red))",
+          blue: "hsl(var(--nintendo-blue))",
+          yellow: "hsl(var(--nintendo-yellow))",
+          green: "hsl(var(--nintendo-green))",
+          purple: "hsl(var(--nintendo-purple))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +70,21 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-console': 'var(--gradient-console)',
+        'gradient-games': 'var(--gradient-games)',
+        'gradient-subtle': 'var(--gradient-subtle)',
+      },
+      boxShadow: {
+        'gaming': 'var(--shadow-gaming)',
+        'console': 'var(--shadow-console)',
+        'glow': 'var(--shadow-glow)',
+      },
+      transitionTimingFunction: {
+        'bounce': 'var(--transition-bounce)',
+        'smooth': 'var(--transition-smooth)',
       },
       keyframes: {
         "accordion-down": {

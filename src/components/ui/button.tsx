@@ -15,6 +15,11 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Nintendo-themed variants
+        hero: "bg-white text-primary shadow-gaming hover:shadow-glow hover:scale-105 transition-all duration-300 font-bold",
+        "outline-hero": "border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary shadow-glow transition-all duration-300 font-bold",
+        gaming: "bg-gradient-console text-white shadow-console hover:shadow-glow hover:scale-105 transition-all duration-300 font-bold",
+        nintendo: "bg-nintendo-red text-white shadow-gaming hover:bg-nintendo-red/90 hover:shadow-glow transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",
