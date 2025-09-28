@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Calendar, Phone, Mail, MessageCircle } from "lucide-react";
+import Scheduling from "@/components/Scheduling";
 
 const Contact = () => {
+  const [isSchedulingOpen, setIsSchedulingOpen] = useState(false);
   return (
     <section className="py-20 bg-gradient-hero">
       <div className="container mx-auto px-6">
@@ -30,7 +34,12 @@ const Contact = () => {
                   </p>
                 </div>
                 
-                <Button variant="gaming" size="lg" className="w-full mb-4">
+                <Button 
+                  variant="gaming" 
+                  size="lg" 
+                  className="w-full mb-4"
+                  onClick={() => setIsSchedulingOpen(true)}
+                >
                   <Calendar className="mr-2 w-5 h-5" />
                   Schedule Meeting
                 </Button>
@@ -87,7 +96,11 @@ const Contact = () => {
                 Whether you're a first-time player or a seasoned gamer, we're here to help you make the most of your Nintendo experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="lg">
+                <Button 
+                  variant="hero" 
+                  size="lg"
+                  onClick={() => setIsSchedulingOpen(true)}
+                >
                   <Calendar className="mr-2 w-5 h-5" />
                   Book Your Free Consultation
                 </Button>
@@ -99,6 +112,15 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      
+      <Dialog open={isSchedulingOpen} onOpenChange={setIsSchedulingOpen}>
+        <DialogContent className="max-w-4xl max-h-[80vh]">
+          <DialogHeader>
+            <DialogTitle>Schedule Your Nintendo Support Session</DialogTitle>
+          </DialogHeader>
+          <Scheduling />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
